@@ -3,6 +3,7 @@ package com.example.storage
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -34,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         var submitButton = findViewById<Button>(R.id.buttonSubmit)
         var checkbox = findViewById<CheckBox>(R.id.checkBoxRememberMe)
 
+        var anim = AnimationUtils.loadAnimation(this,R.anim.blink)
+        submitButton.startAnimation(anim)
+
 
         sp = getSharedPreferences("myfile", MODE_PRIVATE)
 
@@ -53,6 +57,8 @@ class MainActivity : AppCompatActivity() {
                 editTextName.setText(sp.getString("keyun",""))
                 editTextPass.setText(sp.getString("keypass",""))
             }
+
+            //overridePendingTransition(R.anim.blink,R.anim.blink)
 
         }
 
