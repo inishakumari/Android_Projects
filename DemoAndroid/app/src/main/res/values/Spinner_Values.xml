@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="team_name">
+        <item>INDIA</item>
+        <item>GERMANY</item>
+        <item>US</item>
+        <item>JAPAN</item>
+    </string-array>
+
+</resources>

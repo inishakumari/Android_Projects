@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/mytoast" android:title="TOAST"></item>
+    <item android:id="@+id/myact" android:title="ACTIVITY"></item>
+    <item android:title="search" android:id="@+id/mysearch"
+        android:icon="@drawable/searchpic_foreground"
+        app:showAsAction="always"
+        ></item>
+    <item android:id="@+id/myclose" android:title="CLOSE"
+        android:icon="@drawable/closepic_foreground"
+        app:showAsAction="always"></item>
+
+</menu>
