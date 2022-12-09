@@ -10,8 +10,8 @@ import kotlinx.coroutines.flow.Flow
 interface HistoryDao {
 
     @Insert
-    suspend fun insert(historyEntity: HistoryEntity)
+    suspend fun insert(historyEntity:HistoryEntity)
 
     @Query("Select * from `history-table`")
-    fun fetchAllDates(): Flow<List<HistoryEntity>>
+    fun fetchALlDates():Flow<List<HistoryEntity>>
 }

@@ -3,9 +3,7 @@ package com.dbs.employeeapplication
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
-@Entity(tableName="history-table")
-data class HistoryEntity (
+@Entity(tableName = "history-table")
+data class HistoryEntity(
     @PrimaryKey
-    val date:String
-        )
+    val date:String)

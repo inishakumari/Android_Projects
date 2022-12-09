@@ -22,9 +22,8 @@ class MainActivity : AppCompatActivity() {
             val intent1 = Intent(this,RegistrationActivity::class.java)
             startActivity(intent1)
         }
-
         binding?.btnHistory?.setOnClickListener {
-            val intent = Intent(this,HistoryActivity::class.java)
+            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
 

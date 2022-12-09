@@ -30,24 +30,24 @@ class RegistrationActivity : AppCompatActivity() {
             val email = binding?.etEmail?.text.toString()
             val password = binding?.etPassword?.text.toString()
             var flag = true
-                if(nameValidator(fname) || nameValidator(lname)){
-                    flag=false
-                }
-                if(!emailValidator(email)){
-                    flag=false
-                }
-                if(!passwordValidator(password)){
-                    flag=false
-                }
-                if(flag){
-                    val intent = Intent(this,SignInActivity::class.java)
-                    startActivity(intent)
-                }
-                else{
-                    Toast.makeText(this,"Fields doesn't match the criteria!!",Toast.LENGTH_LONG).show()
-                }
-
+            if(nameValidator(fname) || nameValidator(lname)){
+                flag=false
             }
+            if(!emailValidator(email)){
+                flag=false
+            }
+            if(!passwordValidator(password)){
+                flag=false
+            }
+            if(flag){
+                val intent = Intent(this,SignInActivity::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this,"Fields doesn't match the criteria!!",Toast.LENGTH_LONG).show()
+            }
+
+        }
 
     }
 
