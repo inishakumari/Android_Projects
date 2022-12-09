@@ -25,4 +25,14 @@
         android:text="SIGNUP"
         app:layout_constraintStart_toEndOf="@+id/btnSignin"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="55dp"
+        android:text="History"
+        app:layout_constraintStart_toStartOf="@+id/btnSignin"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
