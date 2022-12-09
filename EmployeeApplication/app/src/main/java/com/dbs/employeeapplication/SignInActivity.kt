@@ -38,23 +38,29 @@ class SignInActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(this, "Fields cannot be empty!", Toast.LENGTH_LONG).show()
             } else {
+                if (adminValidator(email, password)) {
+                    var intent1 = Intent(this, DashboardActivity::class.java)
 
-                if (!(emailValidator(email) && passwordValidator(password))) {
-                    Toast.makeText(this, "Email or Password is Invalid", Toast.LENGTH_LONG).show()
+                    startActivity(intent1)
                 } else {
-                    val intent = Intent(this, CreateProfileActivity::class.java)
+                    if (!(emailValidator(email) && passwordValidator(password))) {
+                        Toast.makeText(this, "Email or Password is Invalid", Toast.LENGTH_LONG)
+                            .show()
+                    } else {
+                        val intent = Intent(this, CreateProfileActivity::class.java)
 
-                    val dao = (application as EmployeeApp).db.historyDao()
-                    addDateToDatabase(dao)
+                        val dao = (application as EmployeeApp).db.historyDao()
+                        addDateToDatabase(dao)
 
-                    startActivity(intent)
+                        startActivity(intent)
+                    }
                 }
-
             }
         }
 
 
     }
+
     fun emailValidator(email: String): Boolean {
         return (android.util.Patterns.EMAIL_ADDRESS.matcher(email)
             .matches())
@@ -66,6 +72,10 @@ class SignInActivity : AppCompatActivity() {
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{6,}$"
         val passwordMatcher = Regex(passwordPattern)
         return passwordMatcher.matches(password)
+    }
+
+    fun adminValidator(email: String, password: String): Boolean {
+        return (email.equals("admin") && password.equals("admin"))
     }
 
 
@@ -87,4 +97,5 @@ class SignInActivity : AppCompatActivity() {
             ) // Printed in log which is printed if the complete execution is done.
         }
     }
-}
+
+    }

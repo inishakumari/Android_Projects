@@ -2,7 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_history_item_main"
+    android:id="@+id/ll_dashboard_item_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#EBEBEB"
@@ -10,7 +10,7 @@
     android:padding="15dp">
 
     <TextView
-        android:id="@+id/tvPosition"
+        android:id="@+id/tvPosition1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -20,7 +20,7 @@
         tools:text="1" />
 
     <TextView
-        android:id="@+id/tvItem"
+        android:id="@+id/tvItem1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -28,7 +28,7 @@
         android:textColor="#212121"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:text="DATE" />
+        tools:text="USERNAME" />
 
 </LinearLayout>
     <!--END-->

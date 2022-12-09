@@ -39,12 +39,7 @@ class CreateProfileActivity : AppCompatActivity() , AdapterView.OnItemSelectedLi
             startActivity(intent)
         }
 
-       /* val skillSpin = binding?.spSkillset
-        skillSpin?.onItemSelectedListener=this
-        val skillAdapter : ArrayAdapter<*> =
-            ArrayAdapter(this,R.layout.multi_select_spinner,skillSet)
-        skillAdapter.setDropDownViewResource(R.layout.multi_select_spinner)
-        skillSpin?.adapter = skillAdapter*/
+      
 
 
 

@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import com.dbs.employeeapplication.databinding.ActivityRegistrationBinding
+import kotlinx.coroutines.launch
 
 class RegistrationActivity : AppCompatActivity() {
     private var binding:ActivityRegistrationBinding?=null
@@ -21,7 +23,6 @@ class RegistrationActivity : AppCompatActivity() {
         binding?.toolbarRegister?.setNavigationOnClickListener {
             onBackPressed()
         }
-
 
         binding?.btnRegister?.setOnClickListener {
 
@@ -46,7 +47,8 @@ class RegistrationActivity : AppCompatActivity() {
             else{
                 Toast.makeText(this,"Fields doesn't match the criteria!!",Toast.LENGTH_LONG).show()
             }
-
+            val dao = (application as EmployeeApp).db.historyDao()
+            addUserToDatabase(dao)
         }
 
     }
@@ -66,5 +68,12 @@ class RegistrationActivity : AppCompatActivity() {
         val passwordPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{6,}$"
         val passwordMatcher = Regex(passwordPattern)
         return passwordMatcher.matches(password)
+    }
+    private fun addUserToDatabase(historyDao: HistoryDao) {
+        var username = binding?.etFirstName?.text.toString()
+        lifecycleScope.launch{
+            historyDao.insert(DashboardEntity(username))
+        }
+
     }
 }

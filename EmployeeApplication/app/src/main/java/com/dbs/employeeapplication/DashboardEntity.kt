@@ -3,7 +3,8 @@ package com.dbs.employeeapplication
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "history-table")
-data class HistoryEntity(
+
+@Entity(tableName = "dashboard-table")
+data class DashboardEntity(
     @PrimaryKey
-    val date:String )
+    val username:String )

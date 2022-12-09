@@ -8,27 +8,25 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarCreateProfile"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="594dp"
+        android:layout_marginBottom="43dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/btnHistory"
+        app:layout_constraintBottom_toTopOf="@+id/etCompanyName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spProfessionalStatus"
-        android:layout_width="0dp"
+        android:layout_width="210dp"
         android:layout_height="0dp"
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toTopOf="@+id/etLocation"
-        app:layout_constraintEnd_toEndOf="@+id/spSkillset"
-        app:layout_constraintStart_toStartOf="@+id/etCompanyName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCompanyName" />
 
     <EditText
@@ -40,8 +38,7 @@
         android:hint="Company Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/spProfessionalStatus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spProfessionalStatus"
         app:layout_constraintTop_toBottomOf="@+id/toolbarCreateProfile" />
 
     <EditText
@@ -49,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="39dp"
         android:ems="10"
         android:hint="Location"
         android:inputType="textPersonName"
@@ -57,38 +54,40 @@
         app:layout_constraintStart_toStartOf="@+id/spProfessionalStatus"
         app:layout_constraintTop_toBottomOf="@+id/spProfessionalStatus" />
 
-    <Spinner
-        android:id="@+id/spSkillset"
-        android:layout_width="207dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="94dp"
-        app:layout_constraintBottom_toTopOf="@+id/etGitName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLocation" />
-
     <EditText
         android:id="@+id/etGitName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="135dp"
+        android:layout_marginBottom="75dp"
         android:ems="10"
         android:hint="GitHub UserName"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/etLocation"
-        app:layout_constraintStart_toStartOf="@+id/spSkillset" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintStart_toStartOf="@+id/spSkillset"
+        app:layout_constraintTop_toBottomOf="@+id/spSkillset" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="120dp"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarCreateProfile"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etGitName" />
+
+    <EditText
+        android:id="@+id/spSkillset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Skills"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etGitName"
+        app:layout_constraintEnd_toEndOf="@+id/etLocation"
+        app:layout_constraintTop_toBottomOf="@+id/etLocation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

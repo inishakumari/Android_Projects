@@ -35,6 +35,11 @@
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
             />
         <activity
+            android:name=".DashboardActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <!--android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">-->
