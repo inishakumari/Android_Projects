@@ -1,0 +1,77 @@
+
+Git stuff
+
+git setup:
+
+git config --global user.name "Nisha"
+git config --global user.email "nishakumari@dbs.com"
+git config --list
+
+
+git push code folder from local system to github:
+
+git init
+git status
+git add .
+git commit -m "done"
+git remote add origin https://github.com/inishakumari/Android_Projects.git
+git push origin master
+
+
+------------------------------------------------------------------------------------------
+git remote origin https://github.com/inishakumari/Android_Projects.git
+
+Q. difference between dp and sp?
+
+
+Q. what is consuption of singalton object ?
+
+single constructor - private
+static method
+object should be created inside class as its private
+define one static reference- we can make only one copy of this reference
+
+
+Design pattern:
+
+singalton,adapter,factory,
+
+Q what is Builder design pattern?
+
+Q what is string builder (java)
+
+Q difference btw couroutine(asyncronous way, concurrent event) / thread / threadsafe 
+
+Q jpa vs jdbc ?
+
+Q sqlite vs roomDB?
+
+Q what is flow?
+
+Q how to set permission ? 
+
+---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+registration field:
+
